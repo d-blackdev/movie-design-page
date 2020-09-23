@@ -1,0 +1,27 @@
+.btn{
+    width: 100px !important;
+    border: none;
+    outline: none !important;
+    border-radius: 10px !important;
+    transition: all .5 ease-in-out;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500 !important;
+    margin-right: 5px !important;
+}
+.outline{
+    color: #2D47F9 !important;
+    background-color: #1b1f2b !important;
+}
+.outline:hover{
+    color: #fff !important;
+    background-color: #2D47F9 !important;
+}
+.primary{
+    color: #fff !important;
+    background-color: #2D47F9 !important;
+}
+.primary:hover{
+    color: #2D47F9 !important;
+    background-color: #0E111A !important;
+}

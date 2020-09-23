@@ -1,0 +1,22 @@
+.collection-header h5{
+    font-size: 17px !important;
+    margin-bottom: 15px;
+}
+.collection{
+    width: 100% !important;
+}
+.collection-header p{
+    background-color: #fff;
+    color: #2D47F9;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+    padding: 7px;
+    text-align: center;
+    font-size: 15px;
+}
+.collection-header p:hover{
+    background-color: #1d262e;
+    color: #fff;
+    transform: scale(1.1);
+}
