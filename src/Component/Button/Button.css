@@ -25,3 +25,25 @@
     color: #2D47F9 !important;
     background-color: #0E111A !important;
 }
+
+@media (max-width:998px){
+    .btn{
+        width: 100px !important;
+        font-size: 12px !important;
+        margin-right: 15px !important;
+    }
+}
+@media (max-width:580px){
+    .btn{
+        width: 80px !important;
+        font-size: 8px !important;
+        margin-right: 10px !important;
+    }
+}
+@media (max-width:380px){
+    .btn{
+        width: 60px !important;
+        font-size: 8px !important;
+        margin-right: 10px !important;
+    }
+}

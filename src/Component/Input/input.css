@@ -27,13 +27,28 @@
     font-size: 13px !important;
     text-align: left !important;
 }
-.col2{
+/* .col2{
     padding-left: 150px !important;
-}
+} */
 .input-icon{
     text-align: center !important;
     margin-top: 12px;
     margin-left: 10px;
     color: #797b8d !important;
     font-size: 12px !important;
+}
+@media (max-width:880px){
+     .form{
+        display: none !important;
+    } 
+} 
+@media (max-width:1234px){
+    .long{
+        width: 330px !important;
+    }
+}
+@media (max-width:1090px){
+    .long{
+        width: 250px !important;
+    }
 }

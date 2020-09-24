@@ -9,6 +9,9 @@ import MovieCollection from "./MovieCollection/MovieCollection";
 import { datas, datas2 } from "./MovieCollection/Data";
 import ReUseCarousel from "../Component/Carousel/ReUseCarousel";
 import SideNavFooter from "../Component/Navbar/SideNav/SideNavFooter";
+import MediaQuery from 'react-responsive'
+import IconNav from "../Component/Navbar/IconNav/IconNav";
+import IconReUseCarousel from '../Component/Carousel/IconReUseCarousel'
 
 class Index extends Component {
   static contextType = MovieContext;
@@ -18,23 +21,49 @@ class Index extends Component {
     const sideNav = data.map((data, index) => {
       return <SideNav key={index} {...data} />;
     });
+    const horiNav = data.map((data, index) => {
+      return <IconNav key={index} {...data}/>
+    })
 
     return (
       <Container fluid className="main-cont">
-        <Row>
+        <Row className="row">
+          <MediaQuery minDeviceWidth={990}>
           <Col md={3} className="position-relative side">
             <h6 className="categories ">Categories</h6>
 
-                    {sideNav}
-                    <SideNavFooter/>
-          </Col>
-          <Col md={9}>
-            <Carousel />
-            <MovieCollection
-              data={datas}
-              title="Movie Collections"
-              text="All Collections"
-            />
+            {sideNav}
+            <SideNavFooter />
+            </Col>
+          </MediaQuery>
+ 
+          <Col md={12} lg={9} className="side2">
+            <Carousel className="carousel" />
+            {/* Horizontal Icon */}
+            <MediaQuery minDeviceWidth={738}>
+            <div className="hori-cat">
+              <h6 className="hori-title">Tv-Channels</h6>
+              <div className="hori-flex">
+                {horiNav}
+                </div>
+              </div>
+              </MediaQuery>
+            {/* Horizontal Icon for screen <= 560px */}
+            <MediaQuery maxDeviceWidth={736}>
+            <h6 className="hori-title">Tv-Channels</h6>
+
+            <div className="hori-cat2">
+              <IconReUseCarousel data={data}/>
+
+
+              </div>
+              </MediaQuery>
+           
+      
+            <MovieCollection title="Movie Collections"
+              text="All Collections">
+              <ReUseCarousel data={datas} />
+            </MovieCollection>
             <MovieCollection title="New">
               <ReUseCarousel data={datas2} />
             </MovieCollection>

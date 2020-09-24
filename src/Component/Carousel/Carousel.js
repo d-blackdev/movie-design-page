@@ -7,7 +7,7 @@ import img4 from "../../assests/Images/Godzilla.jpg"
 import "./Carousel.css";
 import { FaPlayCircle, FaStar } from "react-icons/fa";
 
-function ControlledCarousel() {
+function ControlledCarousel(props) {
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
@@ -15,7 +15,7 @@ function ControlledCarousel() {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel activeIndex={index} onSelect={handleSelect} {...props}>
       <Carousel.Item className="carousel">
         <img
           className="d-block w-100 carousel-img"

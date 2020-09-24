@@ -2,13 +2,14 @@ import React from "react";
 // import { Carousel } from "react-bootstrap";
 import Carousel from "react-elastic-carousel";
 import MovieCard from "../MovieCard/MovieCard";
+import IconNav from "../Navbar/IconNav/IconNav";
 
 const breakPoints = [
-  { width: 1, itemsToShow: 1 },
-  {width: 368, itemsToShow:3},
-  { width: 550, itemsToShow: 3 },
-  { width: 768, itemsToShow: 4 },
-  { width: 1200, itemsToShow: 4 },
+  { width: 1, itemsToShow: 4 },
+    { width: 468, itemsToShow: 2 },
+  {width:700, itemsToShow:7},
+  { width: 736, itemsToShow: 7 },
+
 ];
 const True = true;
 
@@ -16,7 +17,7 @@ function ReUseCarousel(props) {
   let showList;
   if (props.data) {
     showList = props.data.map((data, index) => (
-      <MovieCard key={index} {...data} />
+      <IconNav key={index} {...data} />
     ));
   } else {
     showList = <>{props.children}</>;

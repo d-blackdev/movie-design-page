@@ -9,13 +9,13 @@ import Button from "../Button/Button";
 function NavBar() {
   return (
     <Container className="nav" fluid>
-      <Row>
-        <Col col={4} className="col1">
+      <Row className="row">
+        <Col col={4}  className="col1">
           <Navbar.Brand href="#home">
             <img width={"200"} src={Logo} alt="Logo" />
           </Navbar.Brand>
         </Col>
-        <Col col={8} className="col2">
+        <Col col={8}  className="col2">
           <Input show type="text" holder="Search" long />
           <div className="select">
             <FaGlobeAfrica className="select-icon" />
